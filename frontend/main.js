@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 })
 
-const functionApiUrl = "";
+const functionApiUrl = window.env.FUNCTION_API_URL ;
 
 const getVisitCount = (req, res) => {
     console.log("getVisitCount called");
