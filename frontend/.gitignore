@@ -1,0 +1,5 @@
+# Node.js dependencies
+node_modules/
+
+# .env file for environment variables (keep sensitive data out of version control)
+.env
