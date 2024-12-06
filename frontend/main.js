@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 })
 
-const functionApiUrl = process.env.FUNCTION_API_URL || "http://localhost:7071/api/CounterFunction";
+const functionApiUrl = "";
 
 const getVisitCount = (req, res) => {
     console.log("getVisitCount called");
