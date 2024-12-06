@@ -1,12 +1,8 @@
-if (typeof process !== 'undefined' && process.env) {
-    require('dotenv').config();
-}
-
 window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 })
 
-const functionApiUrl = window.env.FUNCTION_API_URL ;
+const functionApiUrl = "";
 
 const getVisitCount = (req, res) => {
     console.log("getVisitCount called");
