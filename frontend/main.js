@@ -1,3 +1,7 @@
+if (typeof process !== 'undefined' && process.env) {
+    require('dotenv').config();
+}
+
 window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 })
