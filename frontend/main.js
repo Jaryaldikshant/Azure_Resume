@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 })
 
-const functionApiUrl = "https://countresume.azurewebsites.net/api/CounterFunction?code=bxCuaZH3KWuoiit3TYYwvWzXYIrDwvQw5LGgDTs2aQBKAzFuqWKKZg==";
+const functionApiUrl = process.env.PAJAMA;
 
 const getVisitCount = (req, res) => {
     console.log("getVisitCount called");
