@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 })
 
-const functionApiUrl = "";
+const functionApiUrl = "https://countresume.azurewebsites.net/api/CounterFunction?code=bxCuaZH3KWuoiit3TYYwvWzXYIrDwvQw5LGgDTs2aQBKAzFuqWKKZg==";
 
 const getVisitCount = (req, res) => {
     console.log("getVisitCount called");
@@ -14,7 +14,7 @@ const getVisitCount = (req, res) => {
             console.log("Website Called function API");
             count = response.count;
             document.getElementById("counter").innerText = count;
-        }).catch((error)=>{
+        }).catch((error) => {
             console.log(error);
         })
     }
