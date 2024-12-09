@@ -26,31 +26,31 @@
 
 //     return count;
 // };
-// Define the function first
+window.addEventListener('DOMContentLoaded', () => {
+    getVisitCount();
+});
+
 const getVisitCount = async () => {
     console.log("getVisitCount called");
 
     try {
-        // Fetch environment variable from Azure API endpoint
-        const response = await fetch("/api/GetFunctionUrl");
-        if (!response.ok) {
-            throw new Error("Failed to fetch API URL.");
+        const apiUrl = process.env.FUNCTION_API_URL || "";
+        if (!apiUrl) {
+            throw new Error("API URL is not defined.");
         }
 
-        const { apiUrl } = await response.json();  // Ensure correct variable name
         const apiResponse = await fetch(apiUrl);
-        const data = await apiResponse.json();
+        if (!apiResponse.ok) {
+            throw new Error("Failed to fetch visit count from API.");
+        }
 
+        const data = await apiResponse.json();
         console.log("Website Called function API", data);
+
         const count = data.count || 0;
         document.getElementById("counter").innerText = count;
     } catch (error) {
         console.error("Error fetching visit count:", error);
     }
 };
-
-// Attach the event listener after the function declaration
-window.addEventListener('DOMContentLoaded', (event) => {
-    getVisitCount();
-});
 
