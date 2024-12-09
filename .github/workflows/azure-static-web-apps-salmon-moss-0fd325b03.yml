@@ -38,14 +38,14 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_SALMON_MOSS_0FD325B03 }}
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "./frontend" # App source code path
-          api_location: "./backend" # Api source code path - optional
-          output_location: "." # Built app content directory - optional
+          app_location: "./frontend"  # App source code path
+          api_location: "./backend"   # Api source code path - optional
+          output_location: "."        # Built app content directory - optional
           github_id_token: ${{ steps.idtoken.outputs.result }}
-          ###### End of Repository/Build Configurations ######
-
+          # Pass the environment variable to Azure Static Web App
+          environment_variables: |
+            FUNCTION_API_URL=${{ secrets.FUNCTION_API_URL }}
+            
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
