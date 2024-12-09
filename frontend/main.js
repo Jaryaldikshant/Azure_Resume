@@ -52,5 +52,6 @@ const getVisitCount = async () => {
     } catch (error) {
         console.error("Error fetching visit count:", error);
     }
+
 };
 
