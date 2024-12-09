@@ -30,21 +30,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 });
 
+// Correcting the environment variable access
+const functionApiUrl = process.env.FUNCTION_API_URL;
+
 const getVisitCount = async () => {
     console.log("getVisitCount called");
+    let count = 30;
 
     try {
-        // Fetch the environment variable from the API
-        const response = await fetch('/api/GetFunctionUrl');
-        const data = await response.json();
-        const functionApiUrl = data.functionApiUrl;
+        if (!functionApiUrl) throw new Error("Function API URL not defined");
 
-        // Use the function URL to fetch the visit count
-        const visitResponse = await fetch(functionApiUrl);
-        const visitData = await visitResponse.json();
+        const response = await fetch(functionApiUrl);
+        const data = await response.json();
 
         console.log("Website Called function API");
-        document.getElementById("counter").innerText = visitData.count;
+        count = data.count || count;  // Fallback to default if count is undefined
+        document.getElementById("counter").innerText = count;
     } catch (error) {
         console.error("Error fetching visit count:", error);
     }
