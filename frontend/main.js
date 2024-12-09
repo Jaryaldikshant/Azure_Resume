@@ -34,6 +34,7 @@ const getVisitCount = async () => {
     console.log("getVisitCount called");
 
     try {
+        // Fetch the environment variable injected by Azure
         const apiUrl = process.env.FUNCTION_API_URL || "";
         if (!apiUrl) {
             throw new Error("API URL is not defined.");
@@ -52,6 +53,5 @@ const getVisitCount = async () => {
     } catch (error) {
         console.error("Error fetching visit count:", error);
     }
-
 };
 
