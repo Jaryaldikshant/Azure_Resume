@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 })
 
-const functionApiUrl = "https://countresume.azurewebsites.net/api/CounterFunction?";
+const functionApiUrl = "https://counterforresume.azurewebsites.net/api/CounterFunction?";
 
 const getVisitCount = (req, res) => {
     console.log("getVisitCount called");
