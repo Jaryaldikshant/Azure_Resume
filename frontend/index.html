@@ -30,6 +30,7 @@
    <script src="js/modernizr.js"></script>
    <script src="js/nav.js"></script>
    <script src="main.js"></script>
+   <script src="js/cards.js"></script>
 
    <!-- Favicons
 	================================================== -->
@@ -236,7 +237,7 @@
 
          <div class="nine columns main-col">
             <div class="skill-row">
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -253,7 +254,7 @@
                   </div>
                </div>
 
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -270,7 +271,7 @@
                   </div>
                </div>
 
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -288,7 +289,7 @@
                   </div>
                </div>
 
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -316,7 +317,7 @@
 
          <div class="nine columns main-col">
             <div class="skill-row">
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -333,7 +334,7 @@
                   </div>
                </div>
 
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -350,12 +351,12 @@
                   </div>
                </div>
 
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
                            <i class="fa fa-code skill-icon"></i>
-                           <img src="images/skills/dsa.png" alt="" class="skill-logo">
+                           <!-- <img src="images/skills/dsa.png" alt="" class="skill-logo"> -->
                         </div>
                      </div>
                      <div class="card-back">
@@ -378,12 +379,12 @@
 
          <div class="nine columns main-col">
             <div class="skill-row">
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
                            <i class="fa fa-shield skill-icon"></i>
-                           <img src="images/skills/cybersecurity.png" alt="" class="skill-logo">
+                           <!-- <img src="images/skills/cybersecurity.png" alt="" class="skill-logo"> -->
                         </div>
                      </div>
                      <div class="card-back">
@@ -396,7 +397,7 @@
                   </div>
                </div>
 
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -423,7 +424,7 @@
 
          <div class="nine columns main-col">
             <div class="skill-row">
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -441,7 +442,7 @@
                   </div>
                </div>
 
-               <div class="skill-card" onclick="this.classList.toggle('flipped')">
+               <div class="skill-card">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -464,6 +465,68 @@
 
    </section> <!-- Resume Section End-->
 
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+      <div class="row section-head">
+         <div class="two columns header-col">
+            <h1><span><i class="fa fa-envelope"></i></span></h1>
+         </div>
+         <div class="ten columns">
+            <p class="lead"></p>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="eight columns">
+            <form id="contactForm">
+               <fieldset>
+                  <div>
+                     <label for="contactName">Name <span class="required">*</span></label>
+                     <input name="contactName" type="text" id="contactName" required>
+                  </div>
+
+                  <div>
+                     <label for="contactEmail">Email <span class="required">*</span></label>
+                     <input name="contactEmail" type="email" id="contactEmail" required>
+                  </div>
+
+                  <div>
+                     <label for="contactSubject">Subject</label>
+                     <input name="contactSubject" type="text" id="contactSubject">
+                  </div>
+
+                  <div>
+                     <label for="contactMessage">Message <span class="required">*</span></label>
+                     <textarea name="contactMessage" id="contactMessage" required></textarea>
+                  </div>
+
+                  <div>
+                     <button type="submit" class="submit">Submit</button>
+                     <span id="image-loader">
+                        <img alt="" src="images/loader.gif">
+                     </span>
+                  </div>
+               </fieldset>
+            </form>
+
+            <div id="message-warning">Error</div>
+            <div id="message-success">
+               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+            </div>
+         </div>
+
+         <aside class="four columns footer-widgets">
+            <div class="widget widget_contact">
+               <h4>Contact Details</h4>
+               <p class="address">
+                  <span>Dikshant Jaryal</span><br>
+                  <span>Email: <a href="mailto:your.email@example.com">Jaryaldikshant@gmail.com</a></span>
+               </p>
+            </div>
+         </aside>
+      </div>
+   </section> <!-- Contact Section End-->
 
    <!-- footer
    ================================================== -->
@@ -483,9 +546,9 @@
             </ul>
 
             <ul class="copyright">
-               <p>"Strength does not come from what you can do. It comes from overcoming the things you once thought you
-                  couldn't."</p>
-               <a href="https://www.styleshout.com/free-templates/ceevee/"> Template by CeeVee </a>
+               <!-- <p>"Strength does not come from what you can do. It comes from overcoming the things you once thought you
+                  couldn't."</p> -->
+               <a href="https://www.styleshout.com/free-templates/ceevee/"> </a>
 
             </ul>
 
@@ -509,6 +572,13 @@
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
    <script src="js/download.js"></script>
+   <script src="js/contact.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script type="text/javascript">
+      (function() {
+         emailjs.init("TOnyKZY2GZy9RcFRR"); // Replace with your EmailJS public key
+      })();
+   </script>
 
    <!-- Add smooth scroll behavior to the document -->
    <style>
