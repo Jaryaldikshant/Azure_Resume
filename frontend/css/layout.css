@@ -22,7 +22,111 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; }
+body { 
+   background: #0f0f0f;
+   position: relative;
+   overflow-x: hidden;
+}
+
+body::before {
+   content: "";
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: 
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23FF6B6B' fill-opacity='0.4' d='M50 0 L100 50 L50 100 L0 50 Z'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='30' fill='%234ECDC4' fill-opacity='0.4'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect x='10' y='10' width='40' height='40' fill='%23FFD166' fill-opacity='0.4'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath fill='%2365DEF1' fill-opacity='0.4' d='M60 0 L120 60 L60 120 L0 60 Z'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Ccircle cx='45' cy='45' r='35' fill='%23A78BFA' fill-opacity='0.4'/%3E%3C/svg%3E");
+   background-size: 100px 100px, 80px 80px, 60px 60px, 120px 120px, 90px 90px;
+   background-position: 10% 20%, 90% 80%, 50% 50%, 30% 70%, 70% 30%;
+   background-repeat: no-repeat;
+   z-index: -1;
+   animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+   0% {
+      transform: translate(0, 0);
+   }
+   50% {
+      transform: translate(20px, 20px);
+   }
+   100% {
+      transform: translate(0, 0);
+   }
+}
+
+/* Add tech icons in the background */
+.tech-icon {
+   position: fixed;
+   opacity: 0.7;
+   z-index: -1;
+   animation: float 15s ease-in-out infinite;
+   text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.tech-icon:nth-child(1) {
+   top: 10%;
+   left: 5%;
+   font-size: 4em;
+   animation-delay: 0s;
+   color: #FF6B6B;
+}
+
+.tech-icon:nth-child(2) {
+   top: 30%;
+   right: 10%;
+   font-size: 3.5em;
+   animation-delay: 2s;
+   color: #4ECDC4;
+}
+
+.tech-icon:nth-child(3) {
+   bottom: 20%;
+   left: 15%;
+   font-size: 3.8em;
+   animation-delay: 4s;
+   color: #FFD166;
+}
+
+.tech-icon:nth-child(4) {
+   bottom: 40%;
+   right: 5%;
+   font-size: 3.6em;
+   animation-delay: 6s;
+   color: #A78BFA;
+}
+
+/* Add some subtle gradient overlay */
+body::after {
+   content: "";
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(135deg, rgba(15,15,15,0.5) 0%, rgba(15,15,15,0.6) 100%);
+   z-index: -1;
+}
+
+/* Add a subtle grid pattern */
+body::before {
+   background-image: 
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23FF6B6B' fill-opacity='0.3' d='M50 0 L100 50 L50 100 L0 50 Z'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='30' fill='%234ECDC4' fill-opacity='0.3'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect x='10' y='10' width='40' height='40' fill='%23FFD166' fill-opacity='0.3'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath fill='%2365DEF1' fill-opacity='0.3' d='M60 0 L120 60 L60 120 L0 60 Z'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Ccircle cx='45' cy='45' r='35' fill='%23A78BFA' fill-opacity='0.3'/%3E%3C/svg%3E"),
+      linear-gradient(rgba(255, 107, 107, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 107, 107, 0.15) 1px, transparent 1px);
+   background-size: 100px 100px, 80px 80px, 60px 60px, 120px 120px, 90px 90px, 20px 20px, 20px 20px;
+   background-position: 10% 20%, 90% 80%, 50% 50%, 30% 70%, 70% 30%, 0 0, 0 0;
+}
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -38,15 +142,16 @@ header {
 	-webkit-background-size: cover !important;
    text-align: center;
    overflow: hidden;
+   padding-top: 100px;
 }
 
-/* vertically center banner section */
-header:before {
+header::before {
    content: '';
    display: inline-block;
    vertical-align: middle;
    height: 100%;
 }
+
 header .banner {
    display: inline-block;
    vertical-align: middle;
@@ -56,7 +161,12 @@ header .banner {
    text-align: center;
 }
 
-header .banner-text { width: 100%; }
+header .banner-text { 
+   width: 100%; 
+   position: relative;
+   z-index: 2;
+}
+
 header .banner-text h1 {
    font: 90px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
@@ -64,17 +174,32 @@ header .banner-text h1 {
    margin: 0 auto 18px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
 header .banner-text h3 {
    font: 18px/1.9em 'librebaskerville-regular', serif;
    color: #A8A8A8;
    margin: 0 auto;
    width: 70%;
    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+   animation: fadeIn 2s ease-in;
 }
+
 header .banner-text h3 span,
 header .banner-text h3 a {
    color: #fff;
 }
+
 header .banner-text hr {
    width: 60%;
    margin: 18px auto 24px auto;
@@ -88,14 +213,36 @@ header .social {
    padding: 0;
    font-size: 30px;
    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+   animation: slideUp 1s ease-out;
 }
+
+@keyframes slideUp {
+   from {
+      opacity: 0;
+      transform: translateY(30px);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
 header .social li {
    display: inline-block;
    margin: 0 15px;
    padding: 0;
 }
-header .social li a { color: #fff; }
-header .social li a:hover { color: #4372c8; }
+
+header .social li a { 
+   color: #fff;
+   transition: all 0.3s ease;
+}
+
+header .social li a:hover { 
+   color: #FF6B6B;
+   transform: scale(1.2);
+   text-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
+}
 
 /* scrolldown link */
 header .scrolldown a {
@@ -1012,4 +1159,564 @@ footer .social-links li:first-child { margin-left: 0; }
  	border-radius: 100%;
 }
 #go-top a:hover { background-color: #2e5598; }
+
+/* Skills Cards Layout
+--------------------------------------------------------------------- */
+.skills-container {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   margin-top: 2rem;
+}
+
+.skill-category {
+   margin-bottom: 0;
+}
+
+.skill-category h3 {
+   color: #11ABB0;
+   margin-bottom: 0.5rem;
+   font-size: 1.5rem;
+   text-align: center;
+   padding: 0;
+}
+
+.skill-row {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: none;
+   gap: 1rem;
+   margin-bottom: 0;
+   padding: 0;
+}
+
+.skill-card {
+   flex: 1;
+   min-width: 150px;
+   max-width: 180px;
+   height: 180px;
+   perspective: 1000px;
+   margin: 0;
+   padding: 0;
+}
+
+.card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   transition: transform 0.8s;
+   transform-style: preserve-3d;
+}
+
+.skill-card:hover .card-inner {
+   transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
+   background: #f5f5f5;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.card-back {
+   transform: rotateY(180deg);
+   background: #313131;
+   color: #fff;
+   padding: 25px;
+}
+
+.card-back ul {
+   margin: 0;
+   padding: 10px;
+   list-style: none;
+   text-align: left;
+   width: 100%;
+}
+
+.card-back li {
+   margin-bottom: 8px;
+   font-size: 0.9rem;
+   line-height: 1.2;
+   position: relative;
+   padding-left: 20px;
+}
+
+.card-back li:before {
+   content: "•";
+   position: absolute;
+   left: 0;
+   color: #4372c8;
+   font-size: 16px;
+}
+
+.card-front h3 {
+   margin: 0 0 10px 0;
+   color: #313131;
+   font-size: 18px;
+   font-weight: 600;
+}
+
+.skill-logo {
+   width: 50px;
+   height: 50px;
+   object-fit: contain;
+   margin-bottom: 15px;
+   transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-logo {
+   transform: scale(1.1);
+}
+
+.card-front .info {
+   margin: 0;
+   color: #666;
+   font-size: 14px;
+   font-weight: 500;
+}
+
+@media only screen and (max-width: 900px) {
+   .skill-card {
+      flex: 1 1 calc(50% - 20px);
+   }
+}
+
+@media only screen and (max-width: 600px) {
+   .skill-card {
+      flex: 1 1 100%;
+   }
+}
+
+.skill-icon-container {
+   position: relative;
+   width: 80px;
+   height: 80px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto 20px;
+}
+
+.skill-icon {
+   font-size: 2rem;
+   color: #4372c8;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.skill-logo {
+   width: 60px;
+   height: 60px;
+   object-fit: contain;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.card-front .info {
+   margin: 0;
+   color: #666;
+   font-size: 14px;
+   font-weight: 500;
+}
+
+.skill-text {
+   font-size: 1.2rem;
+   color: #313131;
+   margin-top: 10px;
+   font-weight: 600;
+}
+
+.fab.fa-js {
+   color: #F7DF1E;
+   font-size: 3rem;
+}
+
+.skill-icon-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+}
+
+.js-logo {
+   width: 80px;
+   height: 80px;
+   background-color: #F7DF1E;
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   margin-bottom: 10px;
+}
+
+.js-text {
+   color: #000;
+   font-size: 2.5rem;
+   font-weight: bold;
+   font-family: Arial, sans-serif;
+}
+
+.skill-name {
+   font-size: 1.2rem;
+   color: #313131;
+   font-weight: 600;
+   margin-top: 10px;
+   display: block;
+}
+
+.row.item {
+   margin-bottom: 0;
+   padding: 0;
+}
+
+.row.item h3 {
+   margin-bottom: 0.5rem;
+   padding: 0;
+}
+
+/* Download Button Styles */
+.download {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.download .button {
+    background: #11ABB0;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.download .button:hover {
+    background: #0D8B8F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download .button i {
+    font-size: 1.2rem;
+}
+
+/* Sticker Styles */
+.sticker {
+    position: fixed;
+    font-size: 2.5rem;
+    z-index: -1;
+    opacity: 0.7;
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.sticker-1 {
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+    color: #00FFFF;
+}
+
+.sticker-2 {
+    top: 20%;
+    right: 10%;
+    animation-delay: 1s;
+    color: #FF00FF;
+}
+
+.sticker-3 {
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 2s;
+    color: #00FF00;
+}
+
+.sticker-4 {
+    bottom: 25%;
+    right: 5%;
+    animation-delay: 3s;
+    color: #FFFF00;
+}
+
+.sticker-5 {
+    top: 30%;
+    left: 20%;
+    animation-delay: 4s;
+    color: #FF0000;
+}
+
+.sticker-6 {
+    top: 40%;
+    right: 20%;
+    animation-delay: 5s;
+    color: #0000FF;
+}
+
+.sticker-7 {
+    top: 15%;
+    left: 30%;
+    animation-delay: 6s;
+    color: #FFA500;
+}
+
+.sticker-8 {
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 7s;
+    color: #FF69B4;
+}
+
+.sticker-9 {
+    top: 25%;
+    left: 40%;
+    animation-delay: 8s;
+    color: #7CFC00;
+}
+
+.sticker-10 {
+    bottom: 30%;
+    right: 35%;
+    animation-delay: 9s;
+    color: #9370DB;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg) scale(1.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+}
+
+/* Add hover effect to stickers */
+.sticker:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* Make stickers responsive */
+@media screen and (max-width: 768px) {
+    .sticker {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sticker {
+        font-size: 1.5rem;
+    }
+}
+
+/* Welcome Background Styles */
+.welcome-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.tech-logo {
+    position: absolute;
+    font-size: 4rem;
+    color: #00FFFF;
+    animation: float-tech 8s ease-in-out infinite;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+}
+
+.tech-logo:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+    color: #00FFFF;
+}
+
+.tech-logo:nth-child(2) {
+    top: 20%;
+    right: 15%;
+    animation-delay: 1s;
+    color: #FF00FF;
+}
+
+.tech-logo:nth-child(3) {
+    bottom: 15%;
+    left: 20%;
+    animation-delay: 2s;
+    color: #00FF00;
+}
+
+.tech-logo:nth-child(4) {
+    bottom: 25%;
+    right: 10%;
+    animation-delay: 3s;
+    color: #FFFF00;
+}
+
+.tech-logo:nth-child(5) {
+    top: 40%;
+    left: 15%;
+    animation-delay: 4s;
+    color: #FF0000;
+}
+
+.tech-logo:nth-child(6) {
+    top: 30%;
+    right: 20%;
+    animation-delay: 5s;
+    color: #0000FF;
+}
+
+@keyframes float-tech {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg) scale(1.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+}
+
+/* Make the banner text stand out */
+.banner-text {
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .tech-logo {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tech-logo {
+        font-size: 2.5rem;
+    }
+}
+
+/* Name Stickers Styles */
+.name-stickers {
+    position: relative;
+    z-index: 1;
+}
+
+.name-sticker {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: 0.8;
+    animation: name-float 4s ease-in-out infinite;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+}
+
+.name-sticker-1 {
+    top: -20px;
+    left: -50px;
+    animation-delay: 0s;
+    color: #00FFFF;
+}
+
+.name-sticker-2 {
+    top: -30px;
+    right: -40px;
+    animation-delay: 0.5s;
+    color: #FF00FF;
+}
+
+.name-sticker-3 {
+    bottom: -20px;
+    left: -40px;
+    animation-delay: 1s;
+    color: #00FF00;
+}
+
+.name-sticker-4 {
+    bottom: -30px;
+    right: -50px;
+    animation-delay: 1.5s;
+    color: #FFFF00;
+}
+
+.name-sticker-5 {
+    top: 50%;
+    left: -60px;
+    animation-delay: 2s;
+    color: #FF0000;
+}
+
+.name-sticker-6 {
+    top: 50%;
+    right: -60px;
+    animation-delay: 2.5s;
+    color: #0000FF;
+}
+
+@keyframes name-float {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Make name stickers responsive */
+@media screen and (max-width: 768px) {
+    .name-sticker {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .name-sticker {
+        font-size: 1.5rem;
+    }
+}
 

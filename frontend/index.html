@@ -38,6 +38,25 @@
 </head>
 
 <body>
+   <!-- Tech Icons in Background -->
+   <div class="tech-icon">💻</div>
+   <div class="tech-icon">⚡</div>
+   <div class="tech-icon">🔧</div>
+   <div class="tech-icon">🌐</div>
+
+   <!-- Stickers -->
+   <div class="sticker sticker-1">🚀</div>
+   <div class="sticker sticker-2">💡</div>
+   <div class="sticker sticker-3">🎯</div>
+   <div class="sticker sticker-4">🌟</div>
+   <div class="sticker sticker-5">⚡</div>
+   <div class="sticker sticker-6">💪</div>
+   <div class="sticker sticker-7">🔧</div>
+   <div class="sticker sticker-8">💻</div>
+   <div class="sticker sticker-9">🌐</div>
+   <div class="sticker sticker-10">🔐</div>
+   <div class="sticker sticker-11">🔒</div>
+   <div class="sticker sticker-12">📱</div>
 
    <!-- Header
    ================================================== -->
@@ -51,13 +70,29 @@
          <ul id="nav" class="nav">
             <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
             <li><a class="smoothscroll" href="#about">About</a></li>
-            <li><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li><a class="smoothscroll" href="#resume">Skills</a></li>
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
 
       <div class="row banner">
          <div class="banner-text">
+            <div class="welcome-background">
+               <div class="tech-logo"><i class="fa fa-code"></i></div>
+               <div class="tech-logo"><i class="fa fa-cloud"></i></div>
+               <div class="tech-logo"><i class="fa fa-server"></i></div>
+               <div class="tech-logo"><i class="fa fa-database"></i></div>
+               <div class="tech-logo"><i class="fa fa-shield-alt"></i></div>
+               <div class="tech-logo"><i class="fa fa-cogs"></i></div>
+            </div>
+            <div class="name-stickers">
+               <div class="name-sticker name-sticker-1">👨‍💻</div>
+               <div class="name-sticker name-sticker-2">⚡</div>
+               <div class="name-sticker name-sticker-3">🔧</div>
+               <div class="name-sticker name-sticker-4">🌐</div>
+               <div class="name-sticker name-sticker-5">💡</div>
+               <div class="name-sticker name-sticker-6">🚀</div>
+            </div>
             <h1 class="responsive-headline">Hi, I'm Dikshant</h1>
             <br>
             <p>
@@ -67,7 +102,7 @@
             <!-- <p>This page has been visited <a id="counter"></a> times :)
                </p> -->
 
-            <p class="hmm">"Success doesn’t happen overnight,but
+            <p class="hmm">"Success doesn't happen overnight,but
                <a id="counter"></a>
                <span class="smile">:)</span>
                moments like this bring you closer!"
@@ -122,19 +157,23 @@
             <h2>ABOUT ME</h2>
 
             <p>
-               Aspiring <strong>software engineer</strong> with a solid foundation in <strong>data structures</strong> and 
-               <strong>algorithms</strong>, and hands-on experience with <strong>Azure cloud technologies</strong>, 
-               including <strong>web deployment</strong>, <strong>hosting</strong>, and <strong>CI/CD pipelines</strong>. 
-               Proficient in delivering <strong>innovative cloud</strong> and <strong>DevOps solutions</strong>, with strong 
-               <strong>collaboration skills</strong> and a commitment to contributing to organizational success.
+               Aspiring <strong>software engineer</strong> with expertise in <strong>data structures</strong>, 
+               <strong>algorithms</strong>, and <strong> Cloud technologies</strong>. 
+               Skilled in <strong>web deployment</strong>, <strong>CI/CD pipelines</strong>, and 
+               <strong>DevOps solutions</strong>. Strong <strong>collaboration skills</strong> 
+               and a passion for innovation.
             </p>
             
-
             </br>
             </br>
             I built this page as part of the <span><a href="https://github.com/madebygps/cgc-azure-resume">Cloud Guru
                   Azure Resume Challenge.</a></span>
 
+            <div class="download">
+               <button class="button" onclick="downloadResume()">
+                  <i class="fa fa-download"></i>Download Resume
+               </button>
+            </div>
 
          </div> <!-- end .main-col -->
 
@@ -200,114 +239,237 @@
       <!-- Work
 ----------------------------------------------- -->
       <div class="row work">
-
          <div class="three columns header-col">
-            <h1><span>Skills</span></h1>
+            <h1><span>DevOps Skills</span></h1>
          </div>
 
          <div class="nine columns main-col">
-
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3>Data Structures & Algorithms</h3>
-                  <p class="info" style="font-family: 'Arial', sans-serif; font-size: 16px;"><b>Solid foundation in Data Structures and Algorithms</b></p>
-                  <p>
-                     <li>Good Understanding of core <strong>Data Structures and Algorithms</strong>in <strong>Java</strong> and <strong>C++</strong>.</li>
-                     <li>Proficient in implementing common algorithms for sorting and searching in both <strong>Java</strong> and <strong>C++</strong>.</li>
-                     <li>Strong focus on optimizing solutions to improve efficiency and meet performance requirements.</li>
-                     <li>Good Practice in solving problems and optimizing code for efficiency and scalability in Java and C++.</li>
-                  </p>
+            <div class="skill-row">
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <img src="images/skills/gitlab.png" alt="" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>Pipeline setup & configuration</li>
+                           <li>.gitlab-ci.yml expertise</li>
+                           <li>Runner management</li>
+                        </ul>
+                     </div>
+                  </div>
                </div>
-            </div> <!-- item end -->
 
-            
-
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3>Azure Learning Journey</h3>
-                  <p class="info" style="font-family: 'Arial', sans-serif; font-size: 16px;"><b>Hands-on Azure Practitioner and 
-                     Aspiring Cloud Professional</b></p>
-                  <p>
-                     <li>Hands-on deployment, configuration, and management of Azure services, including Virtual Machines and Networking.</li>
-                     <li>Developing practical knowledge in Azure administration and automation.</li>
-                     <li>Implementing and managing Azure Virtual Networks, Storage Accounts, and Azure Active Directory services.</li>
-                     <li>Building, optimizing, and maintaining cloud solutions following best practices for scalability and security.</li>
-                  </p>
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <img src="images/skills/jenkins.png" alt="Jenkins" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>Jenkins setup & configuration</li>
+                           <li>Pipeline creation</li>
+                           <li>Plugin management</li>
+                        </ul>
+                     </div>
+                  </div>
                </div>
-            </div> <!-- item end -->
-         
 
-            <br>
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3>Cloud Computing & Azure Fundamentals</h3>
-                  <p class="info" style="font-family: 'Arial', sans-serif; font-size: 16px;">
-                     <b>Hands-on experience in Cloud Computing and 
-                     Azure Services</b></p>
-                  <p>
-                     <li>Hands-on experience with core cloud computing concepts and services, including Virtual Machines, Storage, and Networking in Azure.</li>
-                     <li>Proficient in managing Azure pricing models, SLAs, and lifecycle management.</li>
-                     <li>Experience in Azure governance, compliance, and resource management.</li>
-                     <li>Ability to manage Azure subscriptions and resources effectively in real-world scenarios.</li>
-                     <li>Hands-on experience with Azure security tools and features.</li>
-                  </p>
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <i class="fa fa-cube skill-icon"></i>
+                           <img src="images/skills/docker.png" alt="Docker" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>Docker container management</li>
+                           <li>Dockerfile & Compose expertise</li>
+                           <li>Cloud deployment experience</li>
+                        </ul>
+                     </div>
+                  </div>
                </div>
-            </div> <!-- item end -->
-            
 
-            <br>
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3>Bash</h3>
-                  <p class="info" style="font-family: 'Arial', sans-serif; font-size: 16px; "><b>Command-line Expertise for
-                     Cloud and Web Solutions</b></p>
-                  <p>
-                     <li>Proficient in Bash scripting for automating Azure resource deployment and management.</li>
-                     <li>Skilled in creating Azure resources, including virtual machines, storage, and networking
-                        components, using Bash commands.</li>
-                     <li>Experience setting up internet services such as web servers using Bash.</li>
-                     <li>Knowledge of troubleshooting and debugging scripts for system optimization.</li>
-                  </p>
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <i class="fa fa-cloud skill-icon"></i>
+                           <img src="images/skills/cloud.png" alt="Cloud Platforms" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>Hands-on with Azure services</li>
+                           <li>Basic AWS core services</li>
+                           <li>Cloud security & resource management</li>
+                        </ul>
+                     </div>
+                  </div>
                </div>
-            </div> <!-- item end -->
+            </div>
+         </div>
+      </div>
 
-            <br>
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3>Docker</h3>
-                  <p class="info" style="font-family: 'Arial', sans-serif; font-size: 16px;"><b>Containerization and
-                     Deployment</b></p>
-                  <p>
-                     <li>Experience in creating and managing Docker containers for application deployment.</li>
-                     <li>Skilled in writing `Dockerfile`and managing multi-container applications using Compose.</li>
-                     <li>Familiar with deploying Docker containers on cloud platforms such as Azure.</li>
+      <div class="row work">
+         <div class="three columns header-col">
+            <h1><span>Git, GitHub & DSA</span></h1>
+         </div>
 
-                  </p>
+         <div class="nine columns main-col">
+            <div class="skill-row">
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <img src="images/skills/git.png" alt="" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>Version control management</li>
+                           <li>Branching strategies</li>
+                           <li>Repository management</li>
+                        </ul>
+                     </div>
+                  </div>
                </div>
-            </div> <!-- item end -->
 
-
-            <br>
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3>Figma</h3>
-                  <p class="info" style="font-family: 'Arial', sans-serif; font-size: 16px;"><b>Foundational Knowledge in
-                     Design and Prototyping</b></p>
-                  <p>
-                     <li>Ability to create simple designs and prototypes using Figma.</li>
-                     <li>Understanding of basic design tools and features within Figma.</li>
-                     <li>Familiar with organizing design components and layers.</li>
-                  </p>
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <img src="images/skills/github.png" alt="" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>Code collaboration</li>
+                           <li>Pull requests</li>
+                           <li>Issue tracking</li>
+                        </ul>
+                     </div>
+                  </div>
                </div>
-            </div> <!-- item end -->
 
-         </div> <!-- main-col end -->
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <i class="fa fa-code skill-icon"></i>
+                           <img src="images/skills/dsa.png" alt="" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>Strong foundation in DSA using Java/C++</li>
+                           <li>Experience in sorting/searching algorithms</li>
+                           <li>Focus on efficient code solutions</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
-      </div> <!-- End Work -->
+      <div class="row work">
+         <div class="three columns header-col">
+            <h1><span>Security</span></h1>
+         </div>
 
+         <div class="nine columns main-col">
+            <div class="skill-row">
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <i class="fa fa-shield skill-icon"></i>
+                           <img src="images/skills/cybersecurity.png" alt="" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>Network security basics</li>
+                           <li>Cryptography fundamentals</li>
+                           <li>Bash scripting</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
 
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <img src="images/skills/tools.png" alt="Security Tools" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>Wireshark - Network analysis</li>
+                           <li>Burp Suite - Web security</li>
+                           <li>John the Ripper - Security testing</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
+      <div class="row work">
+         <div class="three columns header-col">
+            <h1><span>Design</span></h1>
+         </div>
 
+         <div class="nine columns main-col">
+            <div class="skill-row">
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <i class="fa fa-paint-brush skill-icon"></i>
+                           <img src="images/skills/figma.png" alt="Figma" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>UI/UX design creation</li>
+                           <li>Prototype development</li>
+                           <li>Component organization</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="skill-card">
+                  <div class="card-inner">
+                     <div class="card-front">
+                        <div class="skill-icon-container">
+                           <i class="fa fa-palette skill-icon"></i>
+                           <img src="images/skills/canva.png" alt="Canva" class="skill-logo">
+                        </div>
+                     </div>
+                     <div class="card-back">
+                        <ul>
+                           <li>Graphic design creation</li>
+                           <li>Social media content</li>
+                           <li>Presentation design</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
 
    </section> <!-- Resume Section End-->
 
@@ -356,6 +518,7 @@
    <script src="js/jquery.fittext.js"></script>
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
+   <script src="js/download.js"></script>
 </body>
 
 </html>
