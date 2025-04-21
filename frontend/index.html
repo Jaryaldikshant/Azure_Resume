@@ -28,6 +28,7 @@
    <!-- Script
    ================================================== -->
    <script src="js/modernizr.js"></script>
+   <script src="js/nav.js"></script>
    <script src="main.js"></script>
 
    <!-- Favicons
@@ -235,11 +236,11 @@
 
          <div class="nine columns main-col">
             <div class="skill-row">
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
-                           <img src="images/skills/gitlab.png" alt="" class="skill-logo">
+                           <img src="images/skills/gitlab.png" alt="GitLab" class="skill-logo">
                         </div>
                      </div>
                      <div class="card-back">
@@ -252,7 +253,7 @@
                   </div>
                </div>
 
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -269,7 +270,7 @@
                   </div>
                </div>
 
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -287,7 +288,7 @@
                   </div>
                </div>
 
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -315,11 +316,11 @@
 
          <div class="nine columns main-col">
             <div class="skill-row">
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
-                           <img src="images/skills/git.png" alt="" class="skill-logo">
+                           <img src="images/skills/git.png" alt="Git" class="skill-logo">
                         </div>
                      </div>
                      <div class="card-back">
@@ -332,11 +333,11 @@
                   </div>
                </div>
 
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
-                           <img src="images/skills/github.png" alt="" class="skill-logo">
+                           <img src="images/skills/github.png" alt="GitHub" class="skill-logo">
                         </div>
                      </div>
                      <div class="card-back">
@@ -349,7 +350,7 @@
                   </div>
                </div>
 
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -377,7 +378,7 @@
 
          <div class="nine columns main-col">
             <div class="skill-row">
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -395,7 +396,7 @@
                   </div>
                </div>
 
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -422,7 +423,7 @@
 
          <div class="nine columns main-col">
             <div class="skill-row">
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -440,7 +441,7 @@
                   </div>
                </div>
 
-               <div class="skill-card">
+               <div class="skill-card" onclick="this.classList.toggle('flipped')">
                   <div class="card-inner">
                      <div class="card-front">
                         <div class="skill-icon-container">
@@ -499,16 +500,22 @@
 
    <!-- Java Script
    ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-
-   <script src="js/jquery.flexslider.js"></script>
    <script src="js/waypoints.js"></script>
+   <script src="js/jquery.flexslider.js"></script>
    <script src="js/jquery.fittext.js"></script>
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
    <script src="js/download.js"></script>
+
+   <!-- Add smooth scroll behavior to the document -->
+   <style>
+      html {
+         scroll-behavior: smooth;
+      }
+   </style>
 </body>
 
 </html>

@@ -398,6 +398,40 @@ ul#nav li.current a { color: #1cb752; }
    overflow: hidden;
 }
 
+/* Navigation styles for skills page */
+body.skills-page #nav-wrap {
+   background-color: rgba(51, 51, 51, 0.9);
+}
+
+body.skills-page #nav-wrap ul#nav li a {
+   color: #fff;
+}
+
+body.skills-page #nav-wrap ul#nav li.current a {
+   color: #4372c8;
+}
+
+body.skills-page #nav-wrap ul#nav li a:hover {
+   color: #4372c8;
+}
+
+/* Default navigation styles */
+#nav-wrap {
+   background-color: transparent;
+}
+
+#nav-wrap ul#nav li a {
+   color: #fff;
+}
+
+#nav-wrap ul#nav li.current a {
+   color: #1cb752;
+}
+
+#nav-wrap ul#nav li a:hover {
+   color: #1cb752;
+}
+
 #resume a, #resume a:visited  { color: #4372c8; }
 #resume a:hover, #resume a:focus { color: #313131; }
 

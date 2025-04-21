@@ -520,4 +520,387 @@
       margin-left: 14px;
    }
 
+   /* Resume Section - Mobile Skills */
+   #resume .skills-container {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 0;
+      margin: 0;
+      scroll-snap-type: x mandatory;
+   }
+
+   #resume .skills-wrapper {
+      display: flex;
+      flex-direction: row;
+      min-width: 100%;
+      gap: 0;
+      padding: 0;
+      margin: 0;
+   }
+
+   #resume .skill-category {
+      width: 100%;
+      min-width: 100%;
+      background: #f8f8f8;
+      padding: 15px;
+      border-radius: 0;
+      box-shadow: none;
+      scroll-snap-align: start;
+   }
+
+   #resume .skill-category h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #1b519d;
+      text-align: center;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e0e0e0;
+   }
+
+   #resume .skill-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      padding: 0 5px;
+   }
+
+   #resume .skill-item {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      margin: 0;
+      padding: 0;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      touch-action: manipulation;
+   }
+
+   #resume .skill-item-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      transition: transform 0.3s ease;
+   }
+
+   #resume .skill-item-front {
+      background: white;
+      z-index: 2;
+   }
+
+   #resume .skill-item-back {
+      background: #1b519d;
+      color: white;
+      transform: translateY(100%);
+   }
+
+   #resume .skill-item.flipped .skill-item-front {
+      transform: translateY(-100%);
+   }
+
+   #resume .skill-item.flipped .skill-item-back {
+      transform: translateY(0);
+   }
+
+   #resume .skill-item i {
+      font-size: 24px;
+      margin-bottom: 5px;
+      color: #1b519d;
+   }
+
+   #resume .skill-item-back i {
+      color: white;
+   }
+
+   #resume .skill-item span {
+      font-size: 13px;
+      font-weight: 500;
+      color: #333;
+      text-align: center;
+   }
+
+   #resume .skill-item-back span {
+      color: white;
+   }
+
+   #resume .skill-points {
+      font-size: 11px;
+      margin-top: 5px;
+      color: rgba(255, 255, 255, 0.9);
+      display: block;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 3px 8px;
+      border-radius: 10px;
+   }
+
+   /* DevOps Skills Specific */
+   #resume .devops-skills .skill-item {
+      background: #f0f7ff;
+   }
+
+   #resume .devops-skills .skill-item-back {
+      background: #1b519d;
+   }
+
+   /* Git Skills Specific */
+   #resume .git-skills .skill-item {
+      background: #fff0f0;
+   }
+
+   #resume .git-skills .skill-item-back {
+      background: #d73a49;
+   }
+
+   /* Navigation Dots */
+   #resume .skills-nav {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 15px;
+      padding: 0 15px;
+   }
+
+   #resume .skills-nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ccc;
+      transition: all 0.3s ease;
+   }
+
+   #resume .skills-nav-dot.active {
+      background: #1b519d;
+      transform: scale(1.2);
+   }
+
+}
+
+/* Mobile-First Enhancements
+---------------------------------------------------------------------- */
+@media only screen and (max-width: 480px) {
+   /* General Styles */
+   body {
+      font-size: 16px;
+      line-height: 1.6;
+   }
+
+   section {
+      padding: 20px 0;
+   }
+
+   /* Skills Section - Mobile */
+   #resume .work {
+      margin-bottom: 30px;
+   }
+
+   #resume .header-col {
+      text-align: center;
+      margin-bottom: 20px;
+   }
+
+   #resume .header-col h1 {
+      font-size: 24px;
+   }
+
+   #resume .main-col {
+      padding: 0 10px;
+   }
+
+   /* Skill Cards */
+   .skill-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 0 5px;
+   }
+
+   .skill-card {
+      perspective: 1000px;
+      height: 120px;
+      width: 100%;
+   }
+
+   .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+   }
+
+   .skill-card.flipped .card-inner {
+      transform: rotateY(180deg);
+   }
+
+   .card-front,
+   .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+
+   .card-front {
+      background: white;
+   }
+
+   .card-back {
+      background: #1b519d;
+      color: white;
+      transform: rotateY(180deg);
+      padding: 10px;
+   }
+
+   .skill-icon-container {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .skill-logo {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+   }
+
+   .skill-icon {
+      font-size: 32px;
+      color: #1b519d;
+   }
+
+   .card-back ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+   }
+
+   .card-back li {
+      font-size: 12px;
+      margin-bottom: 5px;
+      line-height: 1.4;
+   }
+
+   /* Category-specific styles */
+   #resume .work:nth-child(2) .card-back { /* DevOps Skills */
+      background: #1b519d;
+   }
+
+   #resume .work:nth-child(3) .card-back { /* Git Skills */
+      background: #d73a49;
+   }
+
+   #resume .work:nth-child(4) .card-back { /* Security Skills */
+      background: #2ecc71;
+   }
+
+   #resume .work:nth-child(5) .card-back { /* Design Skills */
+      background: #9b59b6;
+   }
+}
+
+/* Touch Device Enhancements */
+@media only screen and (hover: none) and (pointer: coarse) {
+   .skill-card {
+      -webkit-tap-highlight-color: transparent;
+   }
+
+   .skill-card:active {
+      transform: scale(0.98);
+   }
+
+   .card-front,
+   .card-back {
+      touch-action: manipulation;
+   }
+
+   .skill-icon-container {
+      width: 50px;
+      height: 50px;
+   }
+
+   .skill-logo {
+      max-width: 80%;
+      max-height: 80%;
+   }
+
+   .card-back li {
+      font-size: 11px;
+      margin-bottom: 4px;
+   }
+}
+
+/* Extra Small Mobile Devices
+---------------------------------------------------------------------- */
+@media only screen and (max-width: 320px) {
+   /* Header */
+   header .banner-text h1 {
+      font: 28px/1.1em 'opensans-bold', sans-serif;
+   }
+
+   header .banner-text h3 {
+      font: 13px/1.5em 'librebaskerville-regular', serif;
+   }
+
+   /* Navigation */
+   #nav-wrap ul#nav {
+      padding: 15px;
+   }
+
+   ul#nav li a {
+      font-size: 14px;
+      padding: 8px 12px;
+   }
+
+   /* About Section */
+   #about .profile-pic {
+      width: 120px;
+      height: 120px;
+   }
+
+   #about .main-col {
+      padding: 0 10px;
+   }
+
+   /* Resume Section */
+   #resume .bars .skills li .bar-wrap em {
+      font-size: 13px;
+   }
+
+   #resume .bars .skills li .bar-wrap .bar {
+      height: 6px;
+   }
+
+   /* Contact Section */
+   #contact input,
+   #contact textarea,
+   #contact select {
+      padding: 10px;
+      font-size: 14px;
+   }
+
+   /* Footer */
+   footer .social-links li {
+      margin: 0 6px;
+   }
+
+   footer .copyright {
+      font-size: 13px;
+   }
 }
