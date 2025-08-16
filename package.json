@@ -1,18 +1,19 @@
 {
-  "name": "azure_resume",
+  "name": "resume-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal resume website deployed on Vercel",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "start": "vercel dev"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["resume", "portfolio", "vercel"],
+  "author": "Dikshant Jaryal",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
   },
-  "scripts": {
-  "test": "jest"
-}
+  "dependencies": {}
 }
